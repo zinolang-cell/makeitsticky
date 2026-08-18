@@ -4,48 +4,48 @@
 
 # Make It Sticky
 
-`makeitsticky` ist ein Codex-Skill für sichere Sticky-, Stacking- und Scroll-Sektionen in Websites. Er hilft dabei, visuell starke Scroll-Übergänge zu entwickeln oder bestehende Implementierungen zu reparieren, ohne Inhalte abzuschneiden, dauerhaft auszublenden oder auf kleinen Viewports unbenutzbar zu machen.
+`makeitsticky` is a Codex skill for building safe sticky, stacking, and scroll-driven sections on websites. It helps create visually compelling scroll transitions or repair existing implementations without clipping content, hiding it permanently, or making layouts unusable on shorter viewports.
 
-## Was der Skill macht
+## What the skill does
 
-- untersucht die vorhandene Seiten-, Section- und Overflow-Struktur;
-- wählt abhängig von Inhalt und verfügbarer Viewport-Höhe einen sicheren Sticky-Modus;
-- behandelt Sticky-Effekte als progressive Verbesserung;
-- trennt die Sticky-Geometrie vom visuellen Text-Fade;
-- schützt Bilder, Videos, SVGs, Formulare und dynamische Bereiche;
-- berücksichtigt Touch-Geräte und `prefers-reduced-motion`;
-- definiert eine Browser-QA-Matrix für Scrollen, Rückscrollen, Breakpoints und Ankerlinks.
+- inspects the existing page, section, and overflow structure;
+- selects a safe sticky mode based on the content and available viewport height;
+- treats sticky effects as progressive enhancement;
+- separates sticky geometry from visual text fading;
+- protects images, videos, SVGs, forms, and dynamic content;
+- provides fallbacks for touch devices and `prefers-reduced-motion`;
+- defines a browser QA matrix for scrolling, reverse scrolling, breakpoints, and anchor links.
 
-## Typische Einsatzfälle
+## Typical use cases
 
-- Überschriften sollen beim Scrollen unter der Navigation stehen bleiben.
-- Aufeinanderfolgende Sektionen sollen sich sauber überdecken.
-- Sticky-Inhalte verschwinden zu früh, überlagern Text oder werden abgeschnitten.
-- Text soll am Ende einer Sektion ausblenden, während Medien sichtbar bleiben.
-- Eine bestehende Scroll-Animation funktioniert nur auf einzelnen Viewport-Größen.
+- Headings should remain positioned directly below the navigation while scrolling.
+- Consecutive sections should cover one another cleanly.
+- Sticky content disappears too early, overlaps text, or gets clipped.
+- Text should fade near the end of a section while media remains visible.
+- An existing scroll animation only works at certain viewport sizes.
 
-## Sicherheitsprinzip
+## Safety principle
 
-Der Skill priorisiert Inhaltssicherheit vor Animation. Inhalte bleiben im DOM und im normalen Dokumentfluss. Unsichere oder dynamische Bereiche erhalten einen Opt-out, und ohne JavaScript, auf Touch-Geräten oder bei reduzierter Bewegung bleibt die Seite vollständig sichtbar und bedienbar.
+The skill prioritizes content safety over animation. Content remains in the DOM and in the normal document flow. Unsafe or dynamic sections receive an opt-out, while the page remains fully visible and usable without JavaScript, on touch devices, and when reduced motion is enabled.
 
-## Verwendung
+## Usage
 
-Nach der Installation kann der Skill in Codex mit `$makeitsticky` aufgerufen werden, zum Beispiel:
+After installation, invoke the skill in Codex with `$makeitsticky`, for example:
 
 ```text
-Nutze $makeitsticky, um die Sticky-Überschriften dieser Landingpage zu prüfen und sicher zu reparieren.
+Use $makeitsticky to review the sticky headings on this landing page and repair them safely.
 ```
 
-Die vollständigen Arbeits- und Prüfregeln stehen in [`SKILL.md`](SKILL.md). Die UI-Metadaten befinden sich in [`agents/openai.yaml`](agents/openai.yaml).
+The complete implementation and validation rules are documented in [`SKILL.md`](SKILL.md). UI metadata is stored in [`agents/openai.yaml`](agents/openai.yaml).
 
 ## Avolang
 
-Entwickelt von [Avolang](https://www.avolang.de) für robuste, zugängliche und wartbare Web-Erlebnisse.
+Developed by [Avolang](https://www.avolang.de) for robust, accessible, and maintainable web experiences.
 
-Kontakt: [info@avolang.de](mailto:info@avolang.de)
+Contact: [info@avolang.de](mailto:info@avolang.de)
 
-## Lizenz
+## License
 
-Der Skill-Code und die Dokumentation stehen unter der [MIT-Lizenz](LICENSE). Der Name Avolang, das Avolang-Logo und sämtliche Dateien im Verzeichnis `assets/` sind davon ausdrücklich ausgenommen und bleiben vollständig geschützt. Für diese Markenelemente gilt die separate [Avolang Brand Assets License](assets/LICENSE).
+The skill code and documentation are available under the [MIT License](LICENSE). The Avolang name, Avolang logo, and all files in the `assets/` directory are expressly excluded and remain fully protected. These brand elements are governed by the separate [Avolang Brand Assets License](assets/LICENSE).
 
-Das öffentliche Repository darf angesehen und geforkt werden. Direkte Änderungen am Original-Repository können ausschließlich durch dessen Eigentümer oder von ihm ausdrücklich berechtigte GitHub-Konten vorgenommen werden.
+The public repository may be viewed and forked. Direct changes to the original repository can only be made by its owner or by GitHub accounts explicitly authorized by the owner.
