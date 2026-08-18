@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make It Sticky"
+  short_description: "Sichere Sticky-Animationen ohne Inhaltsverlust"
+  default_prompt: "Use $makeitsticky to build or repair safe sticky section animations while keeping text, media, and layouts intact."
