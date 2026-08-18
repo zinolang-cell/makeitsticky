@@ -43,3 +43,9 @@ Die vollständigen Arbeits- und Prüfregeln stehen in [`SKILL.md`](SKILL.md). Di
 Entwickelt von [Avolang](https://www.avolang.de) für robuste, zugängliche und wartbare Web-Erlebnisse.
 
 Kontakt: [info@avolang.de](mailto:info@avolang.de)
+
+## Lizenz
+
+Der Skill-Code und die Dokumentation stehen unter der [MIT-Lizenz](LICENSE). Der Name Avolang, das Avolang-Logo und sämtliche Dateien im Verzeichnis `assets/` sind davon ausdrücklich ausgenommen und bleiben vollständig geschützt. Für diese Markenelemente gilt die separate [Avolang Brand Assets License](assets/LICENSE).
+
+Das öffentliche Repository darf angesehen und geforkt werden. Direkte Änderungen am Original-Repository können ausschließlich durch dessen Eigentümer oder von ihm ausdrücklich berechtigte GitHub-Konten vorgenommen werden.
